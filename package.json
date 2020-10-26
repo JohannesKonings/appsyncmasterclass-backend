@@ -1,0 +1,27 @@
+{
+  "name": "appsyncmasterclass-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Backend for the AppSync Masterclass demopp",
+  "main": "index.js",
+  "scripts": {
+    "sls": "sls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohannesKonings/appsyncmasterclass-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohannesKonings/appsyncmasterclass-backend/issues"
+  },
+  "homepage": "https://github.com/JohannesKonings/appsyncmasterclass-backend#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.778.0",
+    "serverless": "2.4.0",
+    "serverless-appsync-plugin": "^1.4.0",
+    "serverless-iam-roles-per-function": "^2.0.2"
+  }
+}
