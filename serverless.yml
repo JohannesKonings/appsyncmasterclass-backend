@@ -21,8 +21,8 @@ package:
     - package.json
 
 custom:
-  region: ${opt:region, self:provider.region} 
-  stage: ${opt:stage, self:provider.stage} 
+  region: ${opt:region, self:provider.region}
+  stage: ${opt:stage, self:provider.stage}
   appSync:
     - ${file(serverless.appsync-api.yml)}
 
@@ -44,7 +44,6 @@ functions:
 
 resources:
   Resources:
-
     UsersTable:
       Type: AWS::DynamoDB::Table
       Properties:
@@ -82,7 +81,7 @@ resources:
             Mutable: true
         LambdaConfig:
           PostConfirmation: !GetAtt ConfirmUserSignupLambdaFunction.Arn
-    
+
     UserPoolInvokeConfirmUserSignupLambdaPermission:
       Type: AWS::Lambda::Permission
       Properties:
@@ -105,8 +104,9 @@ resources:
   Outputs:
     AwsRegion:
       Value: ${self:custom.region}
+
     CognitoUserPoolId:
       Value: !Ref CognitoUserPool
+
     WebCognitoUserPoolClientId:
       Value: !Ref WebUserPoolClient
-
